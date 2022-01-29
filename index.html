@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAEjklEQVR4nNSYX0grxxfHv1GTX6IgqKAiF7y/KOXiv1iwWrTkithqQVAfqkL1TZA+CKIFfeiLtH2wTxYKoiKCUqgWfVF8UVHBP0VBBEUrRMEoijVYUIwGbaacYRI2uWucibG9/cKwu7N7Zj975sycmY3Ce66YZ9iaAZQC+ATABwBeAUgC4AXgAnAMYB/AIoBlAH9FkPtRkcdrAPwK4AoAkyyXAEYAfAbA8FJwlcIjslCPlXUAH0cSLAXALxEA0xbq7j4Acc+FywJwFGE4bdkD8P9w4d4C+PMF4XyFHPAmHM/9E3C+cg7gtSxcygt3a6jBYw6G0RvyNCDqVV3e1taGi4sLxMXF4fb2FqOjo6pNkH6kpkI9UBnO1zc1NbFgFRQUhDu6C7VA0ZpzmoSnRTaQUmFhIaqqqtDV1YWkpECz5ORkpKWlweVy4fLyUrZJg8hIP+vdrFH52tjYWHZwcPCO54I1OTkZjhfz9Dz4rRi9Urq/v8fg4CDS09NxfX2Nm5sbeL1efn54eMg919vby2OTMSbbrM+LlM9nILqV9D8AFSqtkAiOwIaGhpCVlYXU1FTerfn5+VhcXITb7eZ1YeiLIOdxOOWgbmhoYFdXV8zlcjGr1eqvt9vtzOPxsJOTE1ZcXBzutFOgBfxOxbi5uZk5HA4eY6enp/xIMK2tray7u5u53W5e53Q6+XFjY4OVl5erAn6lBRyXNczIyHhyYOiJYA0GgwrgD9AsWF/JBkdNTQ3u7u7gcDgQEyO33vV4PLDZbCgpKcHy8rLsq5K0gImyVna7nY/QiYkJzMzM+Oujo6M5BA2a/f39AJvq6mp+r7KyUgUwSgsoPQ9YrVZ+PDs7w/r6Oj9PSEjAwsIChyBNT0+jtrYWDw8P/Lq0tJQfMzMzZV8TSCn2EFJqb2/3v9iniooKPxyJskt2dnbAM+fn5+js7FRh82oBj2WtZmdn0djYGFA3NzcX0K3z8/PY3d31X9MHUfceHR2pAP4BTRfvq1iurKwgJyfHf00xmZeXh6KiIh6Dm5ubAc9T1tna2lJ5BelQC7ioak2ZY2pqioOSZ/b29gLu00IiMTERa2tr2N7eVm2e9JsWcFmsoBNkrZ1OJ5aWlh69T6HgU0pKiiochdw7XzUSZkp6idKjR/3pewBGhaYIqx6gQewL/m3AsWAorWjHv6KZfkLKYrGgv78fOzs7/HxgYIAvtXJzc/l9Gig0b1K8Soq8R8a/h3qoT/ZrLRYLa2lp4edGo5H19PT479lsNlZfX6/qvW+CYfQ89fVTX6Anmut8io+PR1lZGcbGxlSamAfwvQzgDYDPxd5YWgaDAUajESaTCR0dHejr61Mxp0Txpd6aINSvsDcAaKJLfuwBirvh4WGsrq7ypf7IyAjq6uo4LGUX0vj4OM/DT8C9FX8XlPU61MimBajZbGYmk8lfR+dU5ytRUVGhYm5O/Ml4lswAesV2MFJTyb0YEBH9mVkotoLPAX0Q85zy3ywV0ab6JxEzsmDHIn3pZohQeo6Lad/6IYCPxIuTNO15xXruUKxKwlrO/Cf0dwAAAP//08Cos11QyGgAAAAASUVORK5CYII=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pointer-shot</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no, shrink-to-fit=no"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: black;
+        overflow: hidden;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index.ae665442.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.97d5d60b.js">
+  </head>
+  <body>
+    <svg
+      id="soundOffEl"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 fixed right-0 top-0 mt-2 mr-2 cursor-pointer z-10"
+      viewBox="0 0 20 20"
+      fill="white"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z"
+        clip-rule="evenodd"
+      />
+    </svg>
+
+    <svg
+      id="soundOnEl"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 fixed right-0 top-0 mt-2 mr-2 cursor-pointer z-10 hidden"
+      viewBox="0 0 20 20"
+      fill="white"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+      />
+    </svg>
+
+    <div class="fixed text-white text-sm ml-2 mt-1 select-none">
+      <span>Score: </span><span id="scoreEl">0</span>
+    </div>
+
+    <div class="fixed inset-0 flex items-center justify-center" id="modalEl">
+      <div id="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center">
+        <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
+        <p class="text-sm text-gray-700 mb-4">Points</p>
+        <div>
+          <button
+            class="bg-blue-500 text-white w-full py-3 rounded-full text-sm"
+            id="startGameBtn"
+          >
+            Start Game
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <canvas></canvas>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </body>
+</html>
